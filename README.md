@@ -1,4 +1,4 @@
-# 🌐 Cyberpunk Portfolio
+# 🌐 My Portfolio
 
 ![Cyberpunk Theme](https://img.shields.io/badge/Theme-Cyberpunk-ff00ff)
 ![License](https://img.shields.io/badge/license-MIT-blue)
