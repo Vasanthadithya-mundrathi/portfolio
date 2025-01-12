@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .cyber-text-glow {
+        text-shadow: 0 0 10px theme('colors.neon.green'),
+                    0 0 20px theme('colors.neon.green'),
+                    0 0 30px theme('colors.neon.green');
+    }
+
+    .cyber-box-glow {
+        box-shadow: 0 0 10px theme('colors.neon.green'),
+                   0 0 20px theme('colors.neon.green'),
+                   0 0 30px theme('colors.neon.green');
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: theme('colors.cyber.darker');
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: theme('colors.neon.green');
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: theme('colors.neon.blue');
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+    position: fixed;
+    color: theme('colors.neon.green');
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    line-height: 1;
+    text-shadow: 0 0 5px theme('colors.neon.green');
+    white-space: nowrap;
+    transform: translateY(-50%);
+    pointer-events: none;
+    animation: matrix 20s linear infinite;
+}
+
+/* Cyber Button */
+.cyber-button {
+    @apply relative px-8 py-4 bg-transparent border-2 border-neon-green text-neon-green 
+           font-cyber uppercase tracking-wider overflow-hidden transition-all duration-300
+           hover:bg-neon-green/10;
+}
+
+.cyber-button:hover {
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+.cyber-button-secondary {
+    @apply relative px-8 py-4 bg-transparent border-2 border-neon-blue text-neon-blue 
+           font-cyber uppercase tracking-wider overflow-hidden transition-all duration-300
+           hover:bg-neon-blue/10;
+}
+
+.cyber-button-secondary:hover {
+    box-shadow: 0 0 10px theme('colors.neon.blue'),
+                0 0 20px theme('colors.neon.blue');
+}
+
+.cyber-button-glitch {
+    @apply absolute inset-0 bg-gradient-to-r from-neon-green/20 via-transparent to-neon-green/20
+           translate-x-[-100%] animate-glitch-skew;
+}
+
+.cyber-button-tag {
+    @apply text-neon-pink opacity-50 mx-1;
+}
+
+/* Cyber Box */
+.cyber-box {
+    @apply relative bg-cyber-light/50 backdrop-blur-sm border-2 border-neon-green/30 rounded-lg
+           transition-all duration-300;
+}
+
+.cyber-box:hover {
+    @apply border-neon-green;
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+.cyber-box::before {
+    content: '';
+    @apply absolute -inset-px bg-gradient-to-r from-neon-green via-neon-blue to-neon-pink
+           opacity-0 transition-opacity duration-300 rounded-lg -z-10;
+}
+
+.cyber-box:hover::before {
+    @apply opacity-30;
+}
+
+/* Skill Bars */
+.skill-bar {
+    @apply relative h-8 bg-cyber-darker rounded-full overflow-hidden mb-4;
+}
+
+.skill-bar::before {
+    content: attr(data-skill);
+    @apply absolute left-4 top-1/2 -translate-y-1/2 text-sm z-10 text-neon-green;
+}
+
+.skill-bar::after {
+    content: '';
+    @apply absolute inset-y-0 left-0 bg-gradient-to-r from-neon-green to-neon-blue
+           transition-all duration-1000 ease-out;
+    width: var(--skill-level, 0%);
+}
+
+/* Tool Cards */
+.tool-card {
+    @apply flex items-center space-x-3 p-4 bg-cyber-darker/50 backdrop-blur-sm rounded-lg 
+           border border-neon-green/30 transition-all duration-300 cursor-pointer;
+}
+
+.tool-card:hover {
+    @apply border-neon-green;
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+/* Project Cards */
+.cyber-project-card {
+    @apply relative bg-cyber-light/50 backdrop-blur-sm border-2 border-neon-green/30 
+           rounded-lg overflow-hidden transition-all duration-300 p-6;
+}
+
+.cyber-project-card:hover {
+    @apply border-neon-green;
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+.project-hover {
+    @apply absolute inset-0 bg-gradient-to-r from-neon-green/10 via-neon-blue/10 to-neon-pink/10
+           opacity-0 transition-opacity duration-300;
+}
+
+.cyber-project-card:hover .project-hover {
+    @apply opacity-100;
+}
+
+.cyber-scan-effect {
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-neon-green/20 to-transparent
+           translate-y-[-100%];
+    animation: scanline 2s linear infinite;
+}
+
+/* Project Scroll Styles */
+.project-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.project-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-scroll-container:active {
+  cursor: grabbing;
+}
+
+.project-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 0 15%;
+  width: max-content;
+  will-change: transform;
+}
+
+.project-card {
+  flex: 0 0 320px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Tech Tags */
+.tech-tag {
+    @apply px-3 py-1 bg-cyber-darker/50 backdrop-blur-sm text-neon-green border border-neon-green/30 
+           rounded-full text-sm transition-all duration-300;
+}
+
+.tech-tag:hover {
+    @apply border-neon-green;
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+/* Contact Links */
+.contact-link {
+    @apply flex items-center space-x-2 text-neon-green hover:text-neon-blue transition-colors duration-300;
+}
+
+/* Social Icons */
+.social-icon {
+    @apply text-neon-green transition-colors duration-300;
+}
+
+.social-icon:hover {
+    @apply text-neon-blue;
+    filter: drop-shadow(0 0 10px theme('colors.neon.blue'));
+}
+
+/* Form Elements */
+.cyber-input {
+    @apply bg-cyber-darker/50 backdrop-blur-sm border-2 border-neon-green/30 rounded-lg px-4 py-2 
+           text-neon-green focus:border-neon-green focus:outline-none transition-all duration-300;
+}
+
+.cyber-input:focus {
+    box-shadow: 0 0 10px theme('colors.neon.green'),
+                0 0 20px theme('colors.neon.green');
+}
+
+/* Glitch Effect */
+.glitch-wrapper {
+    @apply relative;
+}
+
+.glitch-text {
+    @apply relative inline-block;
+    animation: glitch 3s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    @apply absolute top-0 w-full h-full;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 theme('colors.neon.pink');
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: 2px 0 theme('colors.neon.blue');
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+/* Matrix Mode */
+.matrix-mode {
+    @apply relative;
+}
+
+.matrix-mode::before {
+    content: '';
+    @apply fixed inset-0 bg-cyber-darker;
+    animation: matrix-fade 0.5s forwards;
+}
+
+/* Animations */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip-path: inset(50% 0 30% 0);
+    }
+    20% {
+        clip-path: inset(20% 0 60% 0);
+    }
+    40% {
+        clip-path: inset(40% 0 40% 0);
+    }
+    60% {
+        clip-path: inset(80% 0 5% 0);
+    }
+    80% {
+        clip-path: inset(10% 0 85% 0);
+    }
+    100% {
+        clip-path: inset(40% 0 43% 0);
+    }
+}
+
+@keyframes matrix-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes cyber-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Matrix Background */
+.matrix-background {
+    @apply fixed inset-0 overflow-hidden pointer-events-none opacity-20;
+    background: linear-gradient(0deg, 
+        theme('colors.neon.green') 25%,
+        theme('colors.cyber.darker') 25%
+    );
+    background-size: 4px 4px;
+    animation: matrix 20s linear infinite;
+}
+
+/* Scanline Effect */
+.scanline {
+    @apply fixed inset-0 pointer-events-none;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        theme('colors.neon.green/10') 50%
+    );
+    background-size: 100% 4px;
+    animation: scanline 10s linear infinite;
+}
+
+@keyframes slideShow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half the width for seamless loop */
+  }
+}
+
+/* Add a glowing effect when hovering over project cards */
+.cyber-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0ff, #f0f, #0ff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.cyber-card:hover::after {
+  opacity: 0.5;
+}
+
+.cyber-button-small {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #0ff;
+  color: #0ff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button-small:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.cyber-tag {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  color: #0ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.cyber-tag:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.project-card {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ensure smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+
+/* Force initial scroll position */
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Prevent unwanted scroll restoration */
+* {
+  scroll-margin-top: 0;
+}

@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M. Vasanthadithya | Cyber Security Specialist</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-cyber-dark text-neon-green font-cyber overflow-x-hidden">
+    <!-- Matrix Rain Background -->
+    <div
+      id="matrix-rain"
+      class="fixed inset-0 pointer-events-none opacity-20"
+    ></div>
+
+    <!-- Scanline Effect -->
+    <div
+      class="scanline fixed inset-0 pointer-events-none bg-gradient-to-b from-transparent via-neon-green/10 to-transparent opacity-10 animate-scanline"
+    ></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-cyber-darker/80 backdrop-blur-sm border-b border-neon-green/20"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="#" class="text-2xl font-glitch text-neon-green animate-glow"
+            >[whoami - M.V.A]</a
+          >
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="nav-link hover:text-neon-blue transition-colors duration-300"
+              >/about</a
+            >
+            <a
+              href="#skills"
+              class="nav-link hover:text-neon-blue transition-colors duration-300"
+              >/skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link hover:text-neon-blue transition-colors duration-300"
+              >/projects</a
+            >
+            <a
+              href="#contact"
+              class="nav-link hover:text-neon-blue transition-colors duration-300"
+              >/contact</a
+            >
+            <a
+              href="#experience"
+              class="nav-link hover:text-neon-blue transition-colors duration-300"
+              >/experience</a
+            >
+          </div>
+          <button
+            id="menu-toggle"
+            class="md:hidden text-neon-green hover:text-neon-blue transition-colors"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-16 6h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-cyber-darker/95 z-40 hidden">
+      <div class="flex flex-col items-center justify-center h-full space-y-8">
+        <a href="#about" class="text-2xl hover:text-neon-blue transition-colors"
+          >/about</a
+        >
+        <a
+          href="#skills"
+          class="text-2xl hover:text-neon-blue transition-colors"
+          >/skills</a
+        >
+        <a
+          href="#projects"
+          class="text-2xl hover:text-neon-blue transition-colors"
+          >/projects</a
+        >
+        <a
+          href="#contact"
+          class="text-2xl hover:text-neon-blue transition-colors"
+          >/contact</a
+        >
+        <a
+          href="#experience"
+          class="text-2xl hover:text-neon-blue transition-colors"
+          >/experience</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden py-20"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col items-center justify-center text-center space-y-8"
+        >
+          <div class="glitch-wrapper">
+            <h1 class="text-4xl md:text-6xl font-glitch animate-glitch mb-4">
+              <span class="text-neon-green">[</span>
+              M. Vasanthadithya
+              <span class="text-neon-green">]</span>
+            </h1>
+          </div>
+          <div class="slogan-wrapper relative group">
+            <p
+              class="text-xl md:text-2xl font-mono cyber-text-glow relative z-10"
+            >
+              <span class="text-neon-pink">&lt;</span>
+              <span class="text-neon-blue">if</span>
+              <span class="text-neon-green">(</span>
+              <span class="text-neon-pink">threat</span>
+              <span class="text-neon-green">)</span>
+              <span class="text-gray-400">{</span>
+              <span class="text-neon-blue">eliminate</span>
+              <span class="text-neon-green">()</span>
+              <span class="text-gray-400">;</span>
+              <span class="text-neon-blue">}</span>
+              <span class="text-neon-pink">else</span>
+              <span class="text-gray-400">{</span>
+              <span class="text-neon-blue">protect</span>
+              <span class="text-neon-green">()</span>
+              <span class="text-gray-400">;</span>
+              <span class="text-neon-blue">}</span>
+              <span class="text-neon-pink">/&gt;</span>
+            </p>
+            <div
+              class="absolute inset-0 bg-cyber-darker/20 blur-sm group-hover:bg-transparent transition-all duration-300"
+            ></div>
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-blue to-neon-green opacity-0 group-hover:opacity-30 blur transition-all duration-300"
+            ></div>
+          </div>
+          <p
+            class="text-xl md:text-2xl text-neon-blue cyber-text-glow animate-pulse"
+          >
+            &lt; Debug. Exploit. Secure. Repeat. /&gt;
+          </p>
+          <div id="terminal-text" class="text-xl md:text-2xl h-20"></div>
+          <div class="flex flex-wrap justify-center gap-6">
+            <a href="#projects" class="cyber-button group">
+              <span class="cyber-button-glitch"></span>
+              <span class="cyber-button-tag">&lt;</span>
+              View_Projects
+              <span class="cyber-button-tag">/&gt;</span>
+            </a>
+            <a href="#contact" class="cyber-button-secondary group">
+              <span class="cyber-button-glitch"></span>
+              <span class="cyber-button-tag">&lt;</span>
+              Initialize_Contact
+              <span class="cyber-button-tag">/&gt;</span>
+            </a>
+          </div>
+          <div
+            id="age-counter"
+            class="text-neon-blue font-mono animate-pulse mt-8"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-display mb-12 cyber-text-glow text-center">
+          About_Me
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <!-- Profile Image -->
+          <div class="flex justify-center">
+            <div class="relative group">
+              <div
+                class="w-64 h-64 rounded-full overflow-hidden border-4 border-neon-green group-hover:border-neon-blue transition-colors duration-300 shadow-[0_0_15px_rgba(57,255,20,0.5)] group-hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]"
+              >
+                <img
+                  src="profile.jpeg"
+                  alt="Profile Picture"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-neon-green to-neon-blue rounded-full opacity-0 group-hover:opacity-30 blur transition-opacity duration-300"
+              ></div>
+            </div>
+          </div>
+
+          <!-- About Content -->
+          <div class="cyber-box p-6 space-y-4">
+            <p class="text-gray-400 leading-relaxed">
+              Greetings! I'm M.VASANTHADITHYA - a passionate cybersecurity
+              enthusiast and web developer, currently pursuing my B.E in
+              Computer Science with a focus on Cybersecurity, IoT & Blockchain
+              Technology at CBIT, Hyderabad.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+              My journey in technology is driven by a deep curiosity for
+              understanding and securing digital systems. I actively participate
+              in bug bounty programs and contribute to making the internet a
+              safer place.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+              When I'm not hunting for vulnerabilities or coding, you'll find me
+              exploring new security tools, participating in CTF competitions,
+              or sharing knowledge with the cybersecurity community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-display mb-12 cyber-text-glow text-center">
+          Skills & Arsenal
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Technical Skills -->
+          <div class="cyber-box p-6 h-96 overflow-y-auto">
+            <h3 class="text-2xl font-display mb-6 text-neon-blue">
+              Technical Skills
+            </h3>
+            <div class="space-y-4">
+              <div
+                class="skill-bar"
+                data-skill="Python"
+                style="--skill-level: 85%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="MySQL"
+                style="--skill-level: 75%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="MongoDB"
+                style="--skill-level: 70%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Shell Scripting"
+                style="--skill-level: 80%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="JavaScript"
+                style="--skill-level: 65%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Node.js"
+                style="--skill-level: 60%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="HTML/CSS"
+                style="--skill-level: 75%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Git"
+                style="--skill-level: 80%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Docker"
+                style="--skill-level: 65%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="API Development"
+                style="--skill-level: 70%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Tech Proficiency -->
+          <div class="cyber-box p-6 h-96 overflow-y-auto">
+            <h3 class="text-2xl font-display mb-6 text-neon-pink">
+              OS Proficiency
+            </h3>
+            <div class="space-y-4">
+              <div
+                class="skill-bar"
+                data-skill="Linux"
+                style="--skill-level: 70%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Windows"
+                style="--skill-level: 60%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Android"
+                style="--skill-level: 50%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="iOS"
+                style="--skill-level: 20%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="Kali Linux"
+                style="--skill-level: 75%"
+              ></div>
+              <div
+                class="skill-bar"
+                data-skill="ParrotOS"
+                style="--skill-level: 65%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Arsenal -->
+          <div class="cyber-box p-6 h-96 overflow-y-auto">
+            <h3 class="text-2xl font-display mb-6 text-neon-green">Arsenal</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="tool-card">
+                <i class="fas fa-bug"></i>
+                <span>Burp Suite</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-network-wired"></i>
+                <span>Wireshark</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-terminal"></i>
+                <span>Metasploit</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-shield-alt"></i>
+                <span>Nmap</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-code"></i>
+                <span>SQLmap</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-key"></i>
+                <span>John the Ripper</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-lock"></i>
+                <span>Hydra</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-file-code"></i>
+                <span>Ghidra</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-search"></i>
+                <span>Gobuster</span>
+              </div>
+              <div class="tool-card">
+                <i class="fas fa-wifi"></i>
+                <span>Aircrack-ng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative overflow-hidden">
+      <div class="container mx-auto px-4 mb-8">
+        <h2 class="text-3xl md:text-4xl font-glitch mb-8 text-center">
+          <span class="text-neon-blue">[</span>
+          Projects.exe
+          <span class="text-neon-blue">]</span>
+        </h2>
+      </div>
+
+      <div class="project-scroll-container relative">
+        <div class="project-wrapper">
+          <!-- Original Projects -->
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">
+                CVSS Calculator
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A vulnerability scoring calculator utilizing the NIST API to
+                assess and quantify security risks based on CVSS metrics.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">NIST API</span>
+                <span class="cyber-tag">Security</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">
+                Stock Analyzer
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Python-based CLI stock analysis tool providing real-time market
+                insights, technical indicators, and trading signals.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">Financial APIs</span>
+                <span class="cyber-tag">Data Analysis</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">Empty</h3>
+              <p class="text-gray-400 mb-4">
+                A command-line tool for securely emptying files and directories
+                without deletion, maintaining system integrity.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">CLI</span>
+                <span class="cyber-tag">System Utils</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Duplicate Projects for Seamless Loop -->
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">
+                CVSS Calculator
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A vulnerability scoring calculator utilizing the NIST API to
+                assess and quantify security risks based on CVSS metrics.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">NIST API</span>
+                <span class="cyber-tag">Security</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">
+                Stock Analyzer
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Python-based CLI stock analysis tool providing real-time market
+                insights, technical indicators, and trading signals.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">Financial APIs</span>
+                <span class="cyber-tag">Data Analysis</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div
+              class="cyber-card relative p-6 mx-4 w-80 bg-cyber-darker border border-neon-blue hover:border-neon-pink transition-colors duration-300"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-pink opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+              ></div>
+              <h3 class="text-xl font-cyber text-neon-blue mb-4">Empty</h3>
+              <p class="text-gray-400 mb-4">
+                A command-line tool for securely emptying files and directories
+                without deletion, maintaining system integrity.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="cyber-tag">Python</span>
+                <span class="cyber-tag">CLI</span>
+                <span class="cyber-tag">System Utils</span>
+              </div>
+              <a href="#" class="cyber-button-small inline-block">
+                <span class="cyber-button-tag">&lt;</span>
+                View_Code
+                <span class="cyber-button-tag">/&gt;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Experience -->
+          <div class="cyber-box p-6 h-[600px] overflow-y-auto relative">
+            <h3 class="text-4xl font-display mb-12 cyber-text-glow">
+              Experience
+            </h3>
+            <div class="space-y-12">
+              <!-- Experience Item 1 -->
+              <div class="relative pl-8 border-l-2 border-neon-green group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-green rounded-full group-hover:shadow-[0_0_10px_rgba(57,255,20,0.5)] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-bug absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-green"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    Bug Bounty Hunter
+                  </h4>
+                  <p class="text-neon-pink">HackerOne - Present</p>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                  Active bug bounty hunter on HackerOne, identifying and
+                  responsibly disclosing security vulnerabilities. Specializing
+                  in web application security, API testing, and network
+                  penetration testing.
+                </p>
+              </div>
+
+              <!-- Experience Item 2 -->
+              <div class="relative pl-8 border-l-2 border-neon-green group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-green rounded-full group-hover:shadow-[0_0_10px_rgba(57,255,20,0.5)] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-code absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-green"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    Frontend Web Developer
+                  </h4>
+                  <p class="text-neon-pink">Freelance - Present</p>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                  Developing modern, responsive websites with cutting-edge
+                  technologies. Specializing in cyberpunk and tech-themed
+                  designs with a focus on user experience and performance
+                  optimization.
+                </p>
+              </div>
+
+              <!-- Experience Item 3 -->
+              <div class="relative pl-8 border-l-2 border-neon-green group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-green rounded-full group-hover:shadow-[0_0_10px_rgba(57,255,20,0.5)] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-user-tie absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-green"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    Internshala Student Partner
+                  </h4>
+                  <p class="text-neon-pink">October 2024 – December 2024</p>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                  Led campus initiatives as an Internshala ambassador,
+                  organizing and conducting webinars to promote skill
+                  development. Encouraged student participation in various
+                  programs and maintained a high engagement rate throughout the
+                  partnership.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="cyber-box p-6 h-[600px] overflow-y-auto">
+            <h3 class="text-4xl font-display mb-12 cyber-text-glow">
+              Education
+            </h3>
+            <div class="space-y-12">
+              <!-- Education Item 1 -->
+              <div class="relative pl-8 border-l-2 border-neon-pink group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-pink rounded-full group-hover:shadow-[0_0_10px_#ff00ff] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-university absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-pink"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    CBIT, Hyderabad
+                  </h4>
+                  <p class="text-neon-pink">2023 - Present</p>
+                  <p class="text-gray-400 mt-2">B.E in Computer Science</p>
+                  <p class="text-gray-400 italic">
+                    Specialization in Cybersecurity, IoT & Blockchain Technology
+                  </p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                  <li>Active member of college cybersecurity club</li>
+                  <li>Participating in CTFs and security competitions</li>
+                  <li>Research focus on blockchain security</li>
+                </ul>
+              </div>
+
+              <!-- Education Item 2 -->
+              <div class="relative pl-8 border-l-2 border-neon-pink group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-pink rounded-full group-hover:shadow-[0_0_10px_#ff00ff] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-atom absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-pink"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    Resonance
+                  </h4>
+                  <p class="text-neon-pink">2021 - 2023</p>
+                  <p class="text-gray-400 mt-2">Intermediate Education</p>
+                  <p class="text-gray-400 italic">
+                    Mathematics, Physics, and Chemistry
+                  </p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                  <li>Strong foundation in mathematical problem-solving</li>
+                  <li>Developed analytical and logical reasoning skills</li>
+                </ul>
+              </div>
+
+              <!-- Education Item 3 -->
+              <div class="relative pl-8 border-l-2 border-neon-pink group">
+                <div
+                  class="absolute -left-3 top-0 w-6 h-6 bg-cyber-darker border-2 border-neon-pink rounded-full group-hover:shadow-[0_0_10px_#ff00ff] transition-all duration-300"
+                >
+                  <i
+                    class="fas fa-school absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs text-neon-pink"
+                  ></i>
+                </div>
+                <div class="mb-4">
+                  <h4
+                    class="text-xl text-neon-green group-hover:cyber-text-glow transition-all duration-300"
+                  >
+                    Tejaswi High School
+                  </h4>
+                  <p class="text-neon-pink">Graduated 2020</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                  <li>
+                    Excellence in academics with focus on science and
+                    mathematics
+                  </li>
+                  <li>
+                    Participated in various technical and cultural activities
+                  </li>
+                  <li>Developed strong foundation for higher education</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Social Links -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-display mb-12 cyber-text-glow text-center">
+          Connect
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Form -->
+          <div class="cyber-box p-6">
+            <h3 class="text-2xl font-display mb-6 text-neon-blue">
+              Communication_Protocol:
+            </h3>
+            <div class="space-y-4">
+              <a href="mailto:vasanth.mundrathi@gmail.com" class="contact-link">
+                <span class="text-neon-pink">&gt;</span>
+                vasanth.mundrathi@gmail.com
+              </a>
+              <p class="contact-link">
+                <span class="text-neon-pink">&gt;</span> +91 XXXXXXXXXX
+              </p>
+              <p class="contact-link">
+                <span class="text-neon-pink">&gt;</span> Naimnagar, Hanamkonda,
+                Telangana
+              </p>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-2xl font-display mb-6 text-neon-blue">
+                Network_Nodes:
+              </h3>
+              <div class="flex space-x-6">
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  class="social-icon"
+                  target="_blank"
+                >
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://instagram.com/vasanthadithya_m"
+                  target="_blank"
+                  class="social-icon"
+                >
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="cyber-box p-6">
+            <h3 class="text-2xl font-display mb-6 text-neon-blue">
+              Find Me On
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin text-2xl"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/yourusername"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fab fa-github text-2xl"></i>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://app.hackthebox.com/profile/yourusername"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fas fa-cube text-2xl"></i>
+                <span>HackTheBox</span>
+              </a>
+              <a
+                href="https://hackerone.com/yourusername"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fas fa-bug text-2xl"></i>
+                <span>HackerOne</span>
+              </a>
+              <a
+                href="https://twitter.com/yourusername"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fab fa-twitter text-2xl"></i>
+                <span>Twitter</span>
+              </a>
+              <a
+                href="https://medium.com/@yourusername"
+                class="contact-link"
+                target="_blank"
+              >
+                <i class="fab fa-medium text-2xl"></i>
+                <span>Medium</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-cyber-darker border-t border-neon-green/20">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-neon-green/60">
+          <span class="text-neon-blue">&lt;</span>
+          &copy; 2025 M. Vasanthadithya. All rights reserved.
+          <span class="text-neon-blue">/&gt;</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Prevent browser from restoring previous scroll position
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      // Multiple approaches to ensure starting at the top
+      document.addEventListener("DOMContentLoaded", function () {
+        // Immediate scroll to top
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "instant",
+        });
+
+        // Delayed smooth scroll to ensure it works
+        setTimeout(() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        }, 100);
+      });
+
+      // Additional fallback for window load
+      window.onload = function () {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
+
+      // Force scroll to top even if user tries to scroll during load
+      let isLoading = true;
+      window.addEventListener("scroll", function () {
+        if (isLoading) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+      // Set loading to false after everything is loaded
+      setTimeout(() => {
+        isLoading = false;
+      }, 500);
+
+      // Your existing project scroll code
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".project-scroll-container");
+        const wrapper = document.querySelector(".project-wrapper");
+        const cards = document.querySelectorAll(".project-card");
+
+        // Clone projects for infinite loop
+        cards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          wrapper.appendChild(clone);
+        });
+
+        // Set initial scroll position to first set of projects
+        container.scrollLeft = 0;
+
+        // Handle infinite scroll
+        function handleInfiniteScroll() {
+          const totalWidth = wrapper.scrollWidth / 2;
+
+          if (container.scrollLeft >= totalWidth) {
+            container.scrollLeft = 0;
+          } else if (container.scrollLeft <= 0) {
+            container.scrollLeft = totalWidth;
+          }
+        }
+
+        // Auto scroll animation with increased speed
+        let autoScrollInterval;
+
+        function startAutoScroll() {
+          autoScrollInterval = setInterval(() => {
+            container.scrollLeft += 4; // Increased speed from 2 to 4
+            handleInfiniteScroll();
+          }, 30); // Decreased interval from 50 to 30 for smoother animation
+        }
+
+        function stopAutoScroll() {
+          clearInterval(autoScrollInterval);
+        }
+
+        // Start auto-scroll by default
+        startAutoScroll();
+
+        // Pause on hover or touch
+        container.addEventListener("mouseenter", stopAutoScroll);
+        container.addEventListener("mouseleave", startAutoScroll);
+        container.addEventListener("touchstart", stopAutoScroll);
+        container.addEventListener("touchend", startAutoScroll);
+
+        // Manual scroll controls
+        let isScrolling = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener("mousedown", (e) => {
+          isScrolling = true;
+          container.style.cursor = "grabbing";
+          startX = e.pageX - container.offsetLeft;
+          scrollLeft = container.scrollLeft;
+          stopAutoScroll();
+        });
+
+        container.addEventListener("mousemove", (e) => {
+          if (!isScrolling) return;
+          e.preventDefault();
+          const x = e.pageX - container.offsetLeft;
+          const walk = (startX - x) * 2;
+          container.scrollLeft = scrollLeft + walk;
+          handleInfiniteScroll();
+        });
+
+        container.addEventListener("mouseup", () => {
+          isScrolling = false;
+          container.style.cursor = "grab";
+          startAutoScroll();
+        });
+
+        container.addEventListener("mouseleave", () => {
+          isScrolling = false;
+          container.style.cursor = "grab";
+        });
+
+        // Touch controls
+        container.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].pageX - container.offsetLeft;
+          scrollLeft = container.scrollLeft;
+          stopAutoScroll();
+        });
+
+        container.addEventListener("touchmove", (e) => {
+          if (!startX) return;
+          const x = e.touches[0].pageX - container.offsetLeft;
+          const walk = (startX - x) * 2;
+          container.scrollLeft = scrollLeft + walk;
+          handleInfiniteScroll();
+        });
+
+        container.addEventListener("touchend", () => {
+          startX = null;
+          startAutoScroll();
+        });
+      });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
