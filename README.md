@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/status-live-brightgreen)
 
-A neon-soaked, cyberpunk-themed portfolio website showcasing my projects and skills with a unique, futuristic aesthetic. Built with modern web technologies and featuring smooth animations, interactive elements, and a seamless project showcase.
+A neon-soaked, cyberpunk-themed portfolio website showcasing my projects and skills with a unique, futuristic aesthetic. Built with modern web technologies and featuring smooth animations, interactive elements, and a seamless project showcase. This project aims to provide a visually stunning and engaging experience for visitors while effectively presenting my capabilities as a developer.
 
 ## ⚡ Features
 
