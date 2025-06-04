@@ -169,7 +169,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- Email: vasanth.mundrathi@gmail.com
+- Email: [SENSITIVE_INFO_REMOVED_BY_AGENT]
 - LinkedIn: https://www.linkedin.com/in/vasanth-adithya-mundrathi/
 
 ## 🌟 Acknowledgments
